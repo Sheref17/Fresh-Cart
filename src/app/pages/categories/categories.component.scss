@@ -1,0 +1,24 @@
+.grid div {
+    border: 1px solid transparent; // إزالة اللون من الحدود بشكل افتراضي
+    border-radius: 0.5rem; // تدوير الحواف
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); // ظل أثقل قليلاً
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; // تأثير الانتقال السلس للظل والحدود
+  
+    &:hover {
+      box-shadow: 0 6px 12px rgba(34, 197, 94, 0.8); // ظل أثقل عند التمرير
+      border-color: rgba(34, 197, 94, 0.7); // جعل الحدود خضراء عند التمرير
+    }
+  
+    h3 {
+      color: #34d399; // لون النص الأخضر
+    }
+  
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover; // التأكد من تغطية الصورة للمساحة بالكامل
+    }
+  }
+  

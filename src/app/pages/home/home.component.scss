@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    border: none; // بدون بوردر في الوضع العادي
+    border-radius: 0.375rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out; // انتقال سلس للـ card
+  
+    &:hover {
+      border: 1px solid #16a34a; // ظهور الـ border عند الـ hover
+      box-shadow: 0 4px 20px #16a34a; // شادو خفيف عند الـ hover
+    }
+  
+    .card-body {
+      padding: 1rem;
+    }
+  
+    button {
+      display: block; // جعل الزر موجود دائمًا
+      opacity: 0; // إخفاء الزر بالشفافية
+      transform: translateY(20px); // بدء الحركة من أسفل
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; // انتقال سلس للحركة والشفافية
+    }
+  
+    &:hover button {
+      opacity: 1; // إظهار الزر
+      transform: translateY(0); // التحريك إلى مكانه الطبيعي عند الـ hover
+    }
+  }
+  

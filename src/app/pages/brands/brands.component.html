@@ -1,0 +1,27 @@
+<section>
+    <h1 class="text-green-500 text-center text-3xl mb-5"> All Brands </h1>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+@for (brand of brndsDetails; track brand._id) {
+
+<div 
+class="bg-gray-50  border pb-5  transition-shadow duration-300 hover:shadow-lg hover:shadow-green-500 " >
+    <div [routerLink]="['/brand-details' , brand._id]"  >
+        <img [src]="brand.image" class="w-full" alt="">
+    </div>
+    <div>
+        <h4 class="text-center">{{brand.name}}</h4>
+    </div>
+
+</div>
+
+
+
+
+
+
+}
+
+
+
+    </div>
+</section>

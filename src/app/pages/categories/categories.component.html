@@ -1,0 +1,13 @@
+<section>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3  gap-4">
+        @for (cat of categroius; track cat._id) {
+         
+          <div [routerLink]="['/sub' , cat._id]" >
+                <img [src]="cat.image"   alt="">
+                <h3 >{{cat.name}}</h3>
+              </div>
+       
+        }
+    </div>
+</section>
+
