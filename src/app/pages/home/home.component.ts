@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../../core/service/cart/cart.service';
 
+
 @Component({
   selector: 'app-home',
   imports: [CarouselModule , RouterLink],
@@ -15,6 +16,7 @@ import { CartService } from '../../core/service/cart/cart.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+
 private readonly toastrService = inject(ToastrService)
 private readonly cartService = inject(CartService)
 
@@ -99,9 +101,13 @@ getAllProudcts():void{
     }
   })
 }
+
+
+ 
   ngOnInit(): void {
   this.getAllProudcts()
   this.getAllCategrious()
+  
   }
 
 
