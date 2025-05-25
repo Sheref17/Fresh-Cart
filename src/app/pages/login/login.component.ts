@@ -2,10 +2,17 @@ import { Component, inject } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../core/service/auth/auth.service';
 import { Router } from '@angular/router';
+import {
+    TranslateService,
+    TranslatePipe,
+    TranslateDirective
+} from "@ngx-translate/core";
+import { _} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule , TranslatePipe],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -15,6 +22,13 @@ private readonly authService = inject(AuthService)
 
   isLoading:boolean = false
   message:string =""
+
+
+    constructor(private translate: TranslateService) {
+    this.translate.get(_('app.hello'), {value: 'world'}).subscribe((res: string) => {
+      console.log(res);
+    });
+  }
 login:FormGroup = new FormGroup({
   email:new FormControl(null ,[ Validators.required] ),
   password:new FormControl(null ,[ Validators.required ,Validators.pattern(/^[A-Z]\w{7,}$/)] ),

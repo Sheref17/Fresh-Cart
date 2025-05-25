@@ -3,8 +3,10 @@ import { CartService } from '../../core/service/cart/cart.service';
 import { Icart } from '../../shared/interfaces/icart';
 import { FlowbiteService } from '../../core/service/flowbite/flowbite.service';
 import { initFlowbite } from 'flowbite';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
+  imports:[CommonModule],
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'

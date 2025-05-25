@@ -1,0 +1,47 @@
+{
+  "login": {
+    "title": "Login Now",
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "signin": "Sign In",
+      "validtion": {
+        "emailvalditon": "This field is required",
+        "passvaldtion": "This field is required",
+        "valid": "Incorrect email or password"
+      }
+    }
+  },
+  "navbar": {
+    "login": "Login",
+    "register": "Register",
+    "lang": "Language",
+    "home": "Home",
+    "proudct": "Products",
+    "categrious": "Categories",
+    "brands": "Brands",
+    "logout": "Logout"
+  },
+   "register": {
+    "title": "Register Now",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "rePassword": "Confirm Password",
+      "phone": "Phone",
+      "signup": "Sign Up",
+      "errors": {
+        "required": "This field is required",
+        "nameLength": "At least 3 characters (and up to 20 characters)",
+        "invalidEmail": "Enter a valid email",
+        "invalidPassword": "Enter a valid password",
+        "invalidPhone": "Enter a valid phone number",
+        "mismatch": "Passwords do not match"
+      }
+    },
+    "messages": {
+      "error": "An error occurred, please try again"
+    }
+  }
+}

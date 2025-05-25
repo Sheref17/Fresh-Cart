@@ -36,6 +36,7 @@ proudcts:Iproudcts[] = []
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
+    rtl:document.documentElement.dir === 'rtl',
    items:1,
     autoplay:true
   }
@@ -47,7 +48,7 @@ proudcts:Iproudcts[] = []
     dots: false,
     autoplay:true,
     autoplaySpeed:100,
-  
+      rtl:document.documentElement.dir === 'rtl',
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
